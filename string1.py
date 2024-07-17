@@ -73,6 +73,8 @@ def test(got, expected):
 # Provided main() calls the above functions with interesting inputs,
 # using test() to check if each result is correct or not.
 def main():
+    NUM_TESTS = 16
+    passed_tests = 0
     print('donuts')
     test(donuts(4), 'Number of donuts: 4')
     test(donuts(9), 'Number of donuts: 9')
@@ -100,6 +102,9 @@ def main():
     test(mix_up('gnash', 'sport'), 'spash gnort')
     test(mix_up('pezzy', 'firm'), 'fizzy perm')
 
+    print()
+    if NUM_TESTS == passed_tests:
+        print('All Tests Passed')
 
 # Standard boilerplate to call the main() function.
 if __name__ == '__main__':
